@@ -40,7 +40,7 @@ function(
     
     # generate request signature
     d_timestamp <- format(Sys.time(), "%Y%m%dT%H%M%SZ", tz = "UTC")
-    url <- paste0("dynamodb.",region,".amazonaws.com")
+    url <- paste0("https://dynamodb.",region,".amazonaws.com")
     Sig <- aws.signature::signature_v4_auth(
            datetime = d_timestamp,
            region = region,
